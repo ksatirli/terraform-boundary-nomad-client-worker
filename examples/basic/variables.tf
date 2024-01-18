@@ -56,6 +56,7 @@ variable "nomad_secret_id" {
   sensitive   = true
 }
 
+# see Notes inside the README.md for more information
 variable "nomad_variable_path" {
   type        = string
   description = "Path of the Nomad Variable."

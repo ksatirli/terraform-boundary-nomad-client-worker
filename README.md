@@ -11,6 +11,8 @@ This Terraform Module provisions resources for a Nomad Client-based Boundary wor
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
+  * [Notes](#notes)
+    * [Nomad Variable Path](#nomad-variable-path)
   * [Author Information](#author-information)
   * [License](#license)
 <!-- TOC -->
@@ -55,6 +57,18 @@ For examples, see the [./examples](https://github.com/ksatirli/terraform-vault-k
 | boundary_user | Exported Values of `boundary_user.main`. |
 | nomad_variable | Exported Values of `nomad_variable.main`. |
 <!-- END_TF_DOCS -->
+
+## Notes
+
+### Nomad Variable Path
+
+The `nomad_variable_path` string defines the location of a [Nomad Variable](https://developer.hashicorp.com/nomad/docs/concepts/variables) that will be rendered with a Boundary Controller address and account credentials.
+
+The format of the variable conforms to a format that may be used with the [Boundary Worker Nomad Pack](https://github.com/workloads/nomad-pack-registry/tree/main/packs/boundary_worker), available via the [Workloads Nomad Pack Registry](https://github.com/workloads/nomad-pack-registry/).
+
+The path of the Nomad Variable enables fine-grained scoping and should be as specific as possible, allowing only the relevant task(s) to read the contents of the Variable.
+
+See the documentation on providing [Variable access to Tasks](https://developer.hashicorp.com/nomad/docs/concepts/variables#task-access-to-variables) for more information.
 
 ## Author Information
 

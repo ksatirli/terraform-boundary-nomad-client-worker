@@ -73,6 +73,7 @@ variable "hcp_boundary_cluster_id" {
   description = "ID of the HCP Boundary Controller."
 }
 
+# see Notes inside the README.md for more information
 variable "nomad_variable_path" {
   type        = string
   description = "Path of the Nomad Variable."
