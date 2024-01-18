@@ -6,7 +6,7 @@ module "simple" {
   boundary_auth_method_login_name = var.boundary_auth_method_login_name
   boundary_auth_method_password   = var.boundary_auth_method_password
 
-  hcp_boundary_cluster_id         = var.hcp_boundary_cluster_id
+  hcp_boundary_cluster_id = var.hcp_boundary_cluster_id
 
   nomad_variable_path = var.nomad_variable_path
 }
