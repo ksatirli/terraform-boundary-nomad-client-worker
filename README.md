@@ -13,6 +13,7 @@
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Notes](#notes)
+    * [Boundary Grant Strings](#boundary-grant-strings)
     * [Nomad Variable Path](#nomad-variable-path)
   * [Author Information](#author-information)
   * [License](#license)
@@ -61,9 +62,15 @@ For examples, see the [./examples](https://github.com/ksatirli/terraform-vault-k
 
 ## Notes
 
+### Boundary Grant Strings
+
+The `boundary_role_grant_strings` Terraform Variable defines the list of Grant strings that will be used to create the Boundary Role.
+
+For more information, see the documentation on [Permissions in Boundary](https://developer.hashicorp.com/boundary/docs/concepts/security/permissions).
+
 ### Nomad Variable Path
 
-The `nomad_variable_path` string defines the location of a [Nomad Variable](https://developer.hashicorp.com/nomad/docs/concepts/variables) that will be rendered with a Boundary Controller address and account credentials.
+The `nomad_variable_path` Terraform Variable defines the location of a [Nomad Variable](https://developer.hashicorp.com/nomad/docs/concepts/variables) that will be rendered with a Boundary Controller address and account credentials.
 
 The format of the variable conforms to a format that may be used with the [Boundary Worker Nomad Pack](https://github.com/workloads/nomad-pack-registry/tree/main/packs/boundary_worker), available via the [Workloads Nomad Pack Registry](https://github.com/workloads/nomad-pack-registry/).
 
