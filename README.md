@@ -1,6 +1,7 @@
 # Boundary: Nomad Client-based Boundary Workers
 
-This Terraform Module provisions resources for a Nomad Client-based Boundary worker deployment.
+> This Terraform Module provisions Boundary Account and Role resources for usage with
+> Nomad Clients that orchestrate deployments of Boundary Worker and Targets.
 
 ## Table of Contents
 
