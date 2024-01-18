@@ -17,17 +17,14 @@ This Terraform Module provisions resources for a Nomad Client-based Boundary wor
 
 ## Requirements
 
-* HashiCorp Boundary `0.14.0` or newer
+* HashiCorp HCP Boundary `0.14.0` or newer
 * HashiCorp Nomad `1.5.0` or newer
 * HashiCorp Terraform `1.5.0` or newer.
 
-* * Terraform `1.5.0` or newer.
 ## Usage
 
 > **Warning**
-> Interacting with Boundary from Terraform causes any secrets that you read and write to be persisted in both Terraform's state file and in any generated plan files.
->
-> For any Terraform module that reads or writes Vault secrets, these files should be treated as sensitive and protected accordingly.
+> Interacting with sensitive data from Terraform causes any secrets that you read and write to be persisted in Terraform's state file and in any generated plan files.
 
 For examples, see the [./examples](https://github.com/ksatirli/terraform-vault-kv-v2/tree/main/examples/) directory.
 
