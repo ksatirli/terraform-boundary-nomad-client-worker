@@ -12,6 +12,10 @@ This is a _basic_ example of the `terraform-boundary-nomad-client-worker` module
 | boundary_auth_method_login_name | Auth Method Login Name of the Boundary Controller. | `string` | n/a | yes |
 | boundary_auth_method_password | Auth Method Password of the Boundary Controller. | `string` | n/a | yes |
 | hcp_boundary_cluster_id | ID of the HCP Boundary Controller. | `string` | n/a | yes |
+| boundary_scope_id | Scope ID for the Default Auth Method of the Boundary Controller. | `string` | `"global"` | no |
+| nomad_addr | Address of the Nomad Server. | `string` | `"http://127.0.0.1:4646"` | no |
+| nomad_region | Address of the Nomad Server. | `string` | `null` | no |
+| nomad_secret_id | Secret ID of an ACL Token of the Nomad Server. | `string` | `null` | no |
 | nomad_variable_path | Path of the Nomad Variable. | `string` | `"nomad/jobs/boundary_worker"` | no |
 
 ### Outputs

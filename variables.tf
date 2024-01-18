@@ -73,34 +73,7 @@ variable "hcp_boundary_cluster_id" {
   description = "ID of the HCP Boundary Controller."
 }
 
-locals {
-  boundary_addr = "https://${var.hcp_boundary_cluster_id}.boundary.hashicorp.cloud"
-}
-
-variable "nomad_addr" {
-  type        = string
-  description = "Address of the Nomad Server."
-  default     = "http://127.0.0.1:4646"
-}
-
-variable "nomad_region" {
-  type        = string
-  description = "Address of the Nomad Server."
-  default     = null
-}
-
-variable "nomad_secret_id" {
-  type        = string
-  description = "Secret ID of an ACL Token of the Nomad Server."
-  default     = null
-  sensitive   = true
-}
-
 variable "nomad_variable_path" {
   type        = string
   description = "Path of the Nomad Variable."
-
-  # This path allows for scoping of variables and should be as specific as possible.
-  # see https://developer.hashicorp.com/nomad/docs/concepts/variables#task-access-to-variables
-  default = "nomad/jobs/boundary_worker"
 }
