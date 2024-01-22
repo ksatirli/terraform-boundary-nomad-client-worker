@@ -1,4 +1,4 @@
-# Boundary: Nomad Client-based Boundary Workers
+# Boundary: Nomad Client-based Workers
 
 > This Terraform Module provisions Boundary Account and Role resources for usage with
 > Nomad Clients that orchestrate deployments of Boundary Worker and Targets.
@@ -6,13 +6,14 @@
 ## Table of Contents
 
 <!-- TOC -->
-* [Boundary: Nomad Client-based Boundary Workers](#boundary-nomad-client-based-boundary-workers)
+* [Boundary: Nomad Client-based Workers](#boundary-nomad-client-based-workers)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Notes](#notes)
+    * [Authentication Methods](#authentication-methods)
     * [Boundary Grant Strings](#boundary-grant-strings)
     * [Nomad Variable Path](#nomad-variable-path)
   * [Author Information](#author-information)
@@ -24,6 +25,7 @@
 * HashiCorp HCP Boundary `0.14.0` or newer
 * HashiCorp Nomad `1.5.0` or newer
 * HashiCorp Terraform `1.5.0` or newer.
+* Account Credentials for the Boundary Controller.
 
 ## Usage
 
@@ -61,6 +63,20 @@ For examples, see the [./examples](https://github.com/ksatirli/terraform-vault-k
 <!-- END_TF_DOCS -->
 
 ## Notes
+
+### Authentication Methods
+
+At present, this module supports the use of the [Password](https://developer.hashicorp.com/boundary/docs/concepts/domain-model/auth-methods#password-auth-method-attributes) authentication method.
+
+The configuration for this authentication method is provided via the following Terraform Variables:
+
+- `boundary_auth_method_id`
+- `boundary_auth_method_login_name`
+- `boundary_auth_method_password`
+
+These variables
+
+Other authentication methods may be included in future versions of this module.
 
 ### Boundary Grant Strings
 
