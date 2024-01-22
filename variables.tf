@@ -63,9 +63,7 @@ variable "boundary_role_name" {
 variable "boundary_scope_id" {
   type        = string
   description = "Scope ID for the Default Auth Method of the Boundary Controller."
-
-  # Workers must be created in the `global` Scope.
-  default = "global"
+  default     = "global"
 }
 
 variable "hcp_boundary_cluster_id" {
