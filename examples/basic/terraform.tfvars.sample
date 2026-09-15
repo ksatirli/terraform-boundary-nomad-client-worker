@@ -1,0 +1,6 @@
+## Boundary-specific configuration
+boundary_auth_method_id         = "ampw_..."
+boundary_auth_method_login_name = "..."
+boundary_auth_method_password   = "..."
+boundary_account_password       = "..."
+hcp_boundary_cluster_id         = "..."
